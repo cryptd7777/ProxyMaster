@@ -35,6 +35,9 @@ pip install PyQt5
 python3 main.py
 ```
 
+### AppImage Version
+You can use the AppImage version for easy distribution and running on most Linux systems. **However, you still need to install all requirements (Python, PyQt6/PyQt5, pkexec, etc.) on your system for full functionality.**
+
 ## Notes
 - You may need to run with admin privileges or ensure `pkexec` is installed for system changes.
 - Proxy history is stored in `~/.proxymaster_proxy_history.json`.
