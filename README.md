@@ -36,7 +36,7 @@ python3 main.py
 ```
 
 ### AppImage Version
-You can use the AppImage version for easy distribution and running on most Linux systems. **However, you still need to install all requirements (Python, PyQt6/PyQt5, pkexec, etc.) on your system for full functionality.**
+👉 Update: The AppImage now works independently and no longer requires you to install Python, PyQt, or other dependencies separately. Just download, make it executable, and run.
 
 ## Notes
 - You may need to run with admin privileges or ensure `pkexec` is installed for system changes.
