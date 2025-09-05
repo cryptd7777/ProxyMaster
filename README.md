@@ -30,13 +30,46 @@ pip install PyQt5
 - `pkexec` (usually provided by `policykit-1`)
 - Access to `/etc/environment` and package manager config files (requires admin privileges)
 
-### Running ProxyMaster
+### Running ProxyMaster (Source Version)
 ```bash
 python3 main.py
 ```
 
-### AppImage Version
-👉 Update: The AppImage now works independently and no longer requires you to install Python, PyQt, or other dependencies separately. Just download, make it executable, and run.
+---
+
+## AppImage Version
+ðŸ‘‰ The AppImage works independently and does not require Python, PyQt, or other dependencies.  
+Just **download**, **make it executable**, and **run**:
+
+```bash
+chmod +x ProxyMaster-x86_64.AppImage
+./ProxyMaster-x86_64.AppImage
+```
+
+### Extra Requirements for Some Distros
+Depending on your distribution, you may need to install missing libraries:
+
+#### **openSUSE**
+```bash
+sudo zypper install libxcb-cursor0
+```
+
+#### **Fedora / RHEL / CentOS**
+```bash
+sudo dnf install libxcb libxkbcommon libxkbcommon-x11
+```
+
+#### **Ubuntu / Debian**
+```bash
+sudo apt install libxcb-cursor0 libxkbcommon-x11-0
+```
+
+#### **Arch / Manjaro**
+```bash
+sudo pacman -S libxcb libxkbcommon-x11
+```
+
+---
 
 ## Notes
 - You may need to run with admin privileges or ensure `pkexec` is installed for system changes.
@@ -44,9 +77,6 @@ python3 main.py
 - The app is designed for Linux desktop environments.
 
 ## Troubleshooting
-- If you see permission errors, make sure `pkexec` is installed and you have admin rights.
-- If PyQt6 is not available, the app will try to use PyQt5.
-- For missing package manager support, ensure the relevant manager is installed and in your PATH.
-
-## License
-MIT
+- If you see **permission errors**, make sure `pkexec` is installed and you have admin rights.
+- If the **AppImage fails to launch**, check the section above for the required libraries on your distro.
+- On Wayland desktops, some functionality may require XWayland compatibility.
